@@ -73,7 +73,7 @@ app.get("/", (request, response) => {
  * We then send that info over to get rendered.
 */
 app.post("/", async (request, response) => {
-    
+    console.log("inside the post method of index - for searching up pokemon");
     // get the pokemon name or id from the body
     let pokemonNameOrId =  request.body.pokemonName;
 
