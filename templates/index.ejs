@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pokemon Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    form {
+        border-radius: 25px;
+        background: #bdeddf;
+        border: 2px solid #73AD21;
+        padding: 20px; 
+        width: 500px;
+        height: 90px; 
+        text-align: center; 
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body{
+        background: #d1fffc;
+        font-family: Ubuntu;
+    }
+
+    #submitbutton{
+        border-radius: 10px;
+        background: #b7fbe7;
+        border: 2px solid #73AD21; 
+        width: 120px;
+        height: 30px; 
+        text-align: center; 
+        font-family: Ubuntu;
+    }
+
+    #resetbutton{
+        border-radius: 10px;
+        background: #b7fbe7;
+        border: 2px solid #73AD21; 
+        width: 60px;
+        height: 30px; 
+        text-align: center; 
+        font-family: Ubuntu;
+    }
+
+    #pokemonNameBox{
+        border-radius: 10px;
+        background: #e4f5f0;
+        border: 2px solid #ffffff; 
+        width: 200px;
+        height: 30px;
+        padding-left: 10px;
+        font-family: Ubuntu;
+    }
+
+</style>
+
+<body>
+    <div>
+        <h1>Pokemon Search Site</h1>
+        Enter a pokemon name or an id from 1-1025 and click submit to see details about the pokemon!
+        <br><br>
+        (eg. Squirtle, Charizard, Bulbasaur)
+        <br><br>
+
+        <form action="http://localhost:<%= port %>/" method="post">
+            <input type="text" id="pokemonNameBox" name="pokemonName" placeholder="squirtle">
+            <br><br>
+
+            <input type="reset" id="resetbutton"/>
+            <input type="submit" id="submitbutton" value="Search pokemon"/>
+        </form>
+
+        <h2>Previous Searches</h2>
+        To see your previous pokemon searches select <a href="/prevPokemon">here</a>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pokemon Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body{
+        background: #d1fffc;
+        font-family: Ubuntu;
+    }
+
+    table{
+        border: 1px solid #73AD21;;
+        border-radius: 10px;
+        width: 400px;
+        font-family: Ubuntu;
+    }
+
+    th, td {
+        border: 1px solid #73AD21;;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: Ubuntu;
+    }
+
+    #submitbutton{
+        border-radius: 10px;
+        background: #b7fbe7;
+        border: 2px solid #73AD21; 
+        width: 250px;
+        height: 30px; 
+        text-align: center; 
+        font-family: Ubuntu;
+    }
+
+
+</style>
+
+<body>
+    <div>
+        <h1>Previously Searched Pokemon</h1>
+        <%- pokemonTable %>
+
+        <br>
+
+        <form action="http://localhost:<%= port %>/clearHistory" method="post">
+            <input type="submit" id="submitbutton" value="Clear Pokemon Search History"/>
+        </form>
+
+        
+
+        <hr>
+        <a href="/">Back to home</a>
+
+	</div>
+</body>
+
+</html>

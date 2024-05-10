@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pokemon Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body{
+        background: #d1fffc;
+        font-family: Ubuntu;
+    }
+
+    table{
+        border: 1px solid #73AD21;;
+        border-radius: 10px;
+        width: 400px;
+        font-family: Ubuntu;
+    }
+
+    th, td {
+        border: 1px solid #73AD21;;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: Ubuntu;
+    }
+
+
+</style>
+
+<body>
+    <div>
+        <h1>Pokemon Info</h1>
+        <table border='1'>
+            <tr>
+                <td><strong>Id: </strong></td>
+                <td><%- id %></td>
+            </tr>
+            <tr>
+                <td><strong>Name: </strong></td>
+                <td><%- name %></td>
+            </tr>
+            <tr>
+                <td><strong>Type: </strong></td>
+                <td><%- type %></td>
+            </tr>
+            <tr>
+                <td><strong>Abilities: </strong></td>
+                <td><%- abilities %></td>
+            </tr>
+            <tr>
+                <td><strong>Height (m): </strong></td>
+                <td><%- height %></td>
+            </tr>
+            <tr>
+                <td><strong>Weight (kg): </strong></td>
+                <td><%- weight %></td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Sprites: </strong></td>
+            </tr>
+            <tr>
+                <td>Normal: </td>
+                <td><img src="<%= pokeImage %>" alt="Pokemon Image"></td>
+            </tr>
+            <tr>
+                <td>Shiny: </td>
+                <td><img src="<%= shiny %>" alt="Shiny Pokemon Image"></td>
+            </tr>  
+
+        </table>
+
+        <!-- <strong>Name: </strong><%- name %><br>
+        <strong>Type: </strong><%- type %><br>
+        <strong>Abilities: </strong><%- abilities %><br>
+        <strong>Height (m): </strong><%- height %><br>
+        <strong>Weight (kg): </strong><%- weight %><br>
+        <strong>Sprites: </strong>
+        <img src="<%= pokeImage %>" alt="Pokemon Image">
+        <img src="<%= shiny %>" alt="Shiny Pokemon Image"><br>  -->       
+
+        <hr>
+        <a href="/">Back to home</a>
+
+	</div>
+</body>
+
+</html>
