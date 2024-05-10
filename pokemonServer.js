@@ -33,7 +33,7 @@ process.stdin.setEncoding("utf8");
 
 // get the port number from what was entered
 //const portNumber = process.argv[2];
-const portNumber = 5000
+const portNumber = process.env.PORT || 5000;
 
 //start the server
 app.listen(portNumber);
